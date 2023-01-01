@@ -12,7 +12,7 @@ body {
 .container-wrapper {
     display: flex;
     flex-direction: column;
-    width: 450px;
+    width: 350px;
     align-items: center;
 }
 
@@ -27,11 +27,8 @@ body {
 }
 
 .amount-input {
-    margin-top: 5px;
-    border-width: 0.5px;
-    border-color: #222;
     height: 50px;
-    font-size: 35px;
+    font-size: 25px;
 }
 
 .currencies {
@@ -56,17 +53,17 @@ body {
     font-size: 25px;
 }
 
-.error {
-    color: red;
-}
+/*#error {*/
+/*    color: red;*/
+/*}*/
 
-.success {
-    color: green;
-}
+/*#success {*/
+/*    color: green;*/
+/*}*/
 
-.warning {
-    color: orange;
-}
+/*#warning {*/
+/*    color: orange;*/
+/*}*/
 
 .convert-btn {
     width: 100%;

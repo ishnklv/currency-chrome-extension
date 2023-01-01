@@ -1,15 +1,11 @@
 export class UILogger {
-  #successElement;
-  #warningElement;
-  #errorElement;
   #timeoutIds;
   #config;
+  #loggerElement;
   constructor(
     config = {},
   ) {
-    this.#successElement = document.getElementById('success');
-    this.#warningElement = document.getElementById('warning');
-    this.#errorElement = document.getElementById('error');
+    this.#loggerElement = document.getElementById('logger');
     this.#timeoutIds = [];
     this.#config = config;
   }
@@ -23,11 +19,12 @@ export class UILogger {
   success(message) {
     this.#clearTimeouts();
 
-    this.#successElement.innerHTML = this.#parseMessage(message);
+    this.#loggerElement.style.color = 'green';
+    this.#loggerElement.innerHTML = this.#parseMessage(message);
 
     const timeoutId = setTimeout(
       () => {
-        this.#successElement.innerHTML = '';
+        this.#loggerElement.innerHTML = '';
       },
       this.#config.timeoutMs || 3000,
     );
@@ -38,11 +35,12 @@ export class UILogger {
   warning(message) {
     this.#clearTimeouts();
 
-    this.#warningElement.innerHTML = this.#parseMessage(message);
+    this.#loggerElement.style.color = 'orange';
+    this.#loggerElement.innerHTML = this.#parseMessage(message);
 
     const timeoutId = setTimeout(
       () => {
-        this.#warningElement.innerHTML = '';
+        this.#loggerElement.innerHTML = '';
       },
       this.#config.timeoutMs || 3000,
     );
@@ -53,11 +51,12 @@ export class UILogger {
   error(message) {
     this.#clearTimeouts();
 
-    this.#errorElement.innerHTML = this.#parseMessage(message);
+    this.#loggerElement.style.color = 'red';
+    this.#loggerElement.innerHTML = this.#parseMessage(message);
 
     const timeoutId = setTimeout(
       () => {
-        this.#errorElement.innerHTML = '';
+        this.#loggerElement.innerHTML = '';
       },
       this.#config.timeoutMs || 3000,
     );

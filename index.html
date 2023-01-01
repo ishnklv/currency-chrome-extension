@@ -13,12 +13,10 @@
 
   <div class="container mt-3 container-wrapper">
     <h2 class="main-title">Currency Exchange Rates</h2>
-    <p id="success"></p>
-    <p id="warning"></p>
-    <p id="error"></p>
+    <p id="logger"></p>
     <div class="amount-wrapper">
       <label class="amount-label" for="amount-input">Amount</label>
-      <input class="amount-input" type="number" id="amount-input">
+      <input class="form-control amount-input" type="number" id="amount-input">
     </div>
     <button id="reverse-btn" class="btn btn-secondary btn-reverse">
       <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
@@ -26,14 +24,14 @@
       </svg>
     </button>
     <div class="currencies">
-      <select name="currency" id="first-currency" class="currency">
-        <option value="USD">USD / US Dollar</option>
+      <select class="form-select currency" name="currency" id="first-currency">
+        <option selected value="USD">USD / US Dollar</option>
         <option value="KGS">KGS / KG Som</option>
         <option value="EUR">EUR / Euro</option>
         <option value="RUB">RUB / Russian Rouble</option>
       </select>
-      <select name="currency" id="second-currency" class="currency">
-        <option value="KGS">KGS / KG Som</option>
+      <select class="form-select currency" name="currency" id="second-currency">
+        <option selected value="KGS">KGS / KG Som</option>
         <option value="USD">USD / US Dollar</option>
         <option value="EUR">EUR / Euro</option>
         <option value="RUB">RUB / Russian Rouble</option>
@@ -43,7 +41,7 @@
       <h4 id="result-value" class="result-value"></h4>
     </div>
     <button id="convert-btn" class="btn btn-primary convert-btn" type="submit">Convert</button>
-    <p class="copyright">Author I.Aktan</p>
+    <p class="copyright">Author: <a href="mailto:aktanishenkulov@gmail.com">aktanishenkulov@gmail.com</a></p>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

@@ -22,7 +22,17 @@ const convert = async (event) => {
 
   const firstCurrencyValue = firstCurrencyElement.value;
   const secondCurrencyValue = secondCurrencyElement.value;
+
+  if (firstCurrencyValue === secondCurrencyValue) {
+    return uiLogger.error('Currencies must been difference');
+  }
+
   const amountValue = +amountElement.value;
+
+  if (! amountValue) {
+    return uiLogger.error('Enter amount value');
+  }
+
   amountElement.value = amountValue;
 
   if (! CURRENCY_CODE[firstCurrencyValue]) {
