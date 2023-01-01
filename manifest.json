@@ -1,0 +1,16 @@
+{
+  "name": "Currency Exchange Rates",
+  "version": "1.0.0",
+  "description": "Currency exchange rates for (USD,EUR,RUB,KGS)",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "manifest_version": 3,
+  "author": "Aktan Ishenkulov",
+  "action":{
+    "default_popup": "index.html",
+    "default_title": "Currency Exchange Rates"
+  }
+}
